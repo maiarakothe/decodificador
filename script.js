@@ -37,7 +37,7 @@ function criptografar() {
                 .replace(/o/g, o)
                 .replace(/u/g, u);
 
-    res.innerHTML = `<p>${texto}</p>`;
+    res.innerHTML = `${texto}`;
     textoElemento.value = ''; 
     copiarBtn.style.display = 'flex'; 
 }
@@ -56,7 +56,7 @@ function descriptografar() {
             .replace(/ober/g, ober)
             .replace(/ufat/g, ufat);
 
-    res.innerHTML = `<p>${texto}</p>`;
+    res.innerHTML = `${texto}`;
     textoElemento.value = ''; 
     copiarBtn.style.display = 'flex';
 }
