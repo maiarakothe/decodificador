@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #E9ECF8;
+    font-family: 'Inter', sans-serif;
+    
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+}
+
+.texto {
+    color: #0A3871;
+    font-size: 32px;
+    display: flex;
+}
+
+
+.img_aviso{
+    flex-direction: row;
+    display: inline;
+}
+
+.aviso {
+    color: #495057;
+    font-size: 12px;
+    display: inline;
+}
+
+#botoes {
+    display: flex;
+    align-items: flex-end;
+}
+
+.botao {
+    padding: 15px 50px;
+    font-size: 16px;
+    font-weight: normal;
+    border-radius: 20px;
+}
+
+.criptografar {
+    background-color: #0A3871;
+    color: white;
+    border: 1px solid #0A3871;
+}
+
+.descriptografar {
+    background-color: #D8DFE8;
+    color: #0A3871;
+    border: 1px solid #0A3871;
+}
+
+.secao_resposta {
+    background-color: white;
+    height: 644px;
+    width: 400px;
+    text-align: center;
+    border-radius: 20px;
+    justify-content: end;
+}
+
+strong {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    color: #343A40;
+}
+
+.secao_resposta > p {
+    font-size: 16px;
+    color: #495057;
+}
