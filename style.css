@@ -9,35 +9,69 @@
 body {
     background-color: #E9ECF8;
     font-family: 'Inter', sans-serif;
-    
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
 }
 
 main {
     display: flex;
     justify-content: space-around;
+    align-items: flex-start;
+    flex: 1;
+    gap: 20px; 
+    padding: 20px; 
 }
 
-.texto {
-    color: #0A3871;
-    font-size: 32px;
+.secao_texto_botao {
     display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    height: 100vh;
+
 }
+
+input {
+    color: #0A3871;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px; /* Espaço abaixo do campo de texto */
+    border-radius: 10px;
+    border: 1px solid #0A3871;
+    padding: 10px;
+    background-color: #E9ECF8;
+}
+
+.texto_aviso {
+    align-items: center;
+    margin-bottom: 20px; 
+    
+}
+
 
 
 .img_aviso{
-    flex-direction: row;
-    display: inline;
+    width: 12px;
+    height: 12px; 
 }
 
 .aviso {
     color: #495057;
     font-size: 12px;
+    flex-direction: row;
     display: inline;
 }
 
 #botoes {
     display: flex;
-    align-items: flex-end;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
 }
 
 .botao {
@@ -45,27 +79,40 @@ main {
     font-size: 16px;
     font-weight: normal;
     border-radius: 20px;
+    margin: 10px 0; 
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .criptografar {
     background-color: #0A3871;
     color: white;
-    border: 1px solid #0A3871;
+}
+
+.criptografar:hover {
+    background-color: #3a6084;
 }
 
 .descriptografar {
     background-color: #D8DFE8;
     color: #0A3871;
-    border: 1px solid #0A3871;
+}
+
+.descriptografar:hover {
+    background-color: #c2cfd6;
 }
 
 .secao_resposta {
     background-color: white;
-    height: 644px;
+    height: 100vh;
     width: 400px;
     text-align: center;
     border-radius: 20px;
-    justify-content: end;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 strong {
@@ -73,9 +120,19 @@ strong {
     font-size: 24px;
     font-weight: bold;
     color: #343A40;
+    padding: 20px;
 }
 
 .secao_resposta > p {
     font-size: 16px;
+    color: #495057;
+    padding: 20px;
+}
+
+footer {
+    background-color: #F1F3F6;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
     color: #495057;
 }

@@ -14,6 +14,8 @@ let ufat = 'u';
 let res = document.getElementById('res');
 let textoElemento = document.getElementById('text');
 
+
+
 function verificarTexto(texto) {
     const regex = /[A-ZÁ-Úá-ú!@#\$%\^\&*\)\(+=._-]/g;
     if (regex.test(texto)) {
