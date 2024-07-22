@@ -34,7 +34,7 @@ main {
 
 }
 
-input {
+textarea {
     color: #0A3871;
     font-size: 20px;
     width: 100%;
@@ -51,8 +51,6 @@ input {
     margin-bottom: 20px; 
     
 }
-
-
 
 .img_aviso{
     width: 12px;
@@ -105,7 +103,7 @@ input {
 
 .secao_resposta {
     background-color: white;
-    height: 100vh;
+    height: 90vh;
     width: 400px;
     text-align: center;
     border-radius: 20px;
@@ -114,6 +112,7 @@ input {
     justify-content: center;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 
 strong {
     display: block;

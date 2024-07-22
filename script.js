@@ -10,11 +10,8 @@ let ai = 'a';
 let ober = 'o';
 let ufat = 'u';
 
-
 let res = document.getElementById('res');
 let textoElemento = document.getElementById('text');
-
-
 
 function verificarTexto(texto) {
     const regex = /[A-ZÁ-Úá-ú!@#\$%\^\&*\)\(+=._-]/g;
@@ -27,10 +24,10 @@ function verificarTexto(texto) {
 
 function criptografar() {
     res.innerHTML = '';
-    let texto = textoElemento.value ;
+    let texto = textoElemento.value;
 
     if (!verificarTexto(texto)) {
-        return
+        return;
     }
 
     texto = texto.replace(/e/g, e)
@@ -39,14 +36,14 @@ function criptografar() {
                 .replace(/o/g, o)
                 .replace(/u/g, u);
 
-    res.innerHTML = `${texto}`
+    res.innerHTML = `${texto}`;
 }
 
 function descriptografar() {
     let texto = textoElemento.value;
 
     if (!verificarTexto(texto)) {
-        return
+        return;
     }
 
     texto = texto.replace(/enter/g, enter)
@@ -55,6 +52,6 @@ function descriptografar() {
             .replace(/ober/g, ober)
             .replace(/ufat/g, ufat);
 
-    res.innerHTML = `${texto}`
+    res.innerHTML = `${texto}`;
 }
 
