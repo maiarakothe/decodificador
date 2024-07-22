@@ -12,6 +12,7 @@ let ufat = 'u';
 
 let res = document.getElementById('res');
 let textoElemento = document.getElementById('text');
+let copiarBtn = document.getElementById('copiarBtn');
 
 function verificarTexto(texto) {
     const regex = /[A-ZÁ-Úá-ú!@#\$%\^\&*\)\(+=._-]/g;
@@ -36,10 +37,13 @@ function criptografar() {
                 .replace(/o/g, o)
                 .replace(/u/g, u);
 
-    res.innerHTML = `${texto}`;
+    res.innerHTML = `<p>${texto}</p>`;
+    textoElemento.value = ''; 
+    copiarBtn.style.display = 'flex'; 
 }
 
 function descriptografar() {
+    res.innerHTML = '';
     let texto = textoElemento.value;
 
     if (!verificarTexto(texto)) {
@@ -52,6 +56,17 @@ function descriptografar() {
             .replace(/ober/g, ober)
             .replace(/ufat/g, ufat);
 
-    res.innerHTML = `${texto}`;
+    res.innerHTML = `<p>${texto}</p>`;
+    textoElemento.value = ''; 
+    copiarBtn.style.display = 'flex';
+}
+
+function copiarTexto() {
+    const textoParaCopiar = res.innerText;
+    navigator.clipboard.writeText(textoParaCopiar).then(() => {
+        res.innerHTML = `Nenhuma mensagem`
+    }).catch(err => {
+        console.error('Erro ao copiar texto: ', err);
+    });
 }
 
